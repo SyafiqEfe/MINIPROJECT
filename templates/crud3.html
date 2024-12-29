@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Item</title>
+  </head>
+  <body>
+    <h1>Edit Item</h1>
+    <form method="POST">
+      <label>Name:</label>
+      <input type="text" name="name" value="{{ item[1] }}" required />
+      <br />
+      <label>Description:</label>
+      <input type="text" name="description" value="{{ item[2] }}" />
+      <br />
+      <button type="submit">Update</button>
+    </form>
+    <a href="/">Back to List</a>
+  </body>
+</html>
