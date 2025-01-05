@@ -5,12 +5,12 @@
   </head>
   <body>
     <h1>Verifikasi OTP</h1>
-    <form method="POST" action="{{ url_for('kirim_otp') }}">
+    <form method="POST" action="{{ url_for('verify_otp') }}">
       <label>Email:</label>
       <input type="email" name="email" required /><br /><br />
       <button type="submit">Kirim OTP</button>
     </form>
-    <form method="POST" action="{{ url_for('verifikasi_otp') }}">
+    <form method="POST" action="{{ url_for('verify_otp') }}">
       <label>Email:</label>
       <input type="email" name="email" required /><br /><br />
       <label>OTP:</label>
