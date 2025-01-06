@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styele.css">
+    <title>Game Suit Sederhana</title>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>🕹️ Game Batu Kertas Gunting</h1>
+        <form method="POST">
+            <p>Pilih salah satu:</p>
+            <div class="choices">
+                <button type="submit" name="choice" value="0" class="btn rock">🪨 Batu</button>
+                <button type="submit" name="choice" value="1" class="btn paper">📜 Kertas</button>
+                <button type="submit" name="choice" value="2" class="btn scissors">✂️ Gunting</button>
+            </div>
+        </form>
+
+        {% if result %}
+        <div class="results">
+            <h2>Hasil:</h2>
+            <p>Kamu memilih: <strong>{{ choices[player_choice] }}</strong></p>
+            <p>Komputer memilih: <strong>{{ choices[computer_choice] }}</strong></p>
+            <h3 class="result {{ 'win' if result == 'Kamu Menang!' else 'lose' if result == 'Kamu Kalah!' else 'draw' }}">
+                {{ result }}
+            </h3>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
