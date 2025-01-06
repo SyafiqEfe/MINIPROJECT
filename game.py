@@ -19,7 +19,7 @@ def index():
         elif (player_choice == 0 and computer_choice == 2) or \
              (player_choice == 1 and computer_choice == 0) or \
              (player_choice == 2 and computer_choice == 1):
-            result = "Kamu Menang!"
+            result = "Kamu juara!"
         else:
             result = "Kamu Kalah!"
 
